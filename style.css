@@ -1,0 +1,119 @@
+/* Tela e página */
+
+body {
+    background: rgb(32, 3, 102);
+}
+
+/* Painel e Life */
+
+#painelInfo {
+    position: absolute;
+    background-color: royalblue;
+    width: 350px;
+    height: 100px;
+    padding: 10px;
+    opacity: .85;
+    transition-duration: .5s;
+    z-index: 6;
+}
+
+#painelInfo:hover {
+    opacity: .95;
+    transition-duration: .5s;
+}
+
+#lifeContainer {
+    position: absolute;
+    left: 10px;
+    top: 60px;
+    background-color: #999;
+    width: 250px;
+    height: 25px;
+    border: 2px solid black;
+}
+
+#life {
+    background-color: rgb(255, 103, 83);
+    width: 250px;
+    height: 25px;
+}
+
+/* Personagens */
+    /* Nave */
+
+#navePrincipal {
+    position: absolute;
+    pointer-events: none;
+    width: 110px;
+    height: 115px;
+}
+
+#naveContainer {
+    position: absolute;
+    z-index: 1;
+}
+
+    /* Mísseis */
+
+.missil {
+    position: absolute;
+    transform: rotate(180deg);
+    width: 35px;
+    height: 75px;
+    z-index: 5;
+    top: 500px;
+}
+
+.misseis {
+    position: absolute;
+    transform: rotate(180deg) scale(0.5);
+    width: 74px;
+    height: 152px;
+    z-index: 5;
+    background-image: URL("img/missil.gif");
+}
+
+/* TIROS */
+
+.tiro {
+    z-index: 4;
+    position: absolute;
+    width: 14px;
+    height: 50px;
+    border-radius: 20px;
+    background-image: linear-gradient(to top, red, rgb(224, 72, 98));
+
+
+    /*
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    background-color: seashell;*/
+}
+
+/* ICONS */
+
+.fa-globe {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    transform: scale(2.5);
+    float: left;
+    color: lightgreen;
+    opacity: 1;
+    z-index: 10;
+}
+
+p {
+    position: absolute;
+    left: 60px;
+    top: 5px;
+    color: rgb(240, 240, 240);
+}
+
+/* TELAS DE DERROTA E VITORIA */
+
+#resultadoFinal {
+    position: absolute;
+}
