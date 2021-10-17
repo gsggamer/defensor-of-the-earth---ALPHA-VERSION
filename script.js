@@ -21,7 +21,7 @@ var velNave = 8.65;
 var velTiro = 6;
 
 var indiceMissil = 0;
-var numMiss = 125;
+var numMiss = 100;
 
 var telaHeight = window.innerHeight;
 var telaWidth = window.innerWidth;
@@ -56,10 +56,10 @@ function inicio() {
     planetLife = 250;
     planetLifeContainer.style.width = '250px';
 
-    tmpIntervalo = 2250;
+    tmpIntervalo = 2300;
 
     clearInterval(intervalo);
-    velMissil = 3.5;
+    velMissil = 4;
     intervalo = setInterval(criaMisseis, tmpIntervalo);
 
     setInterval(function(){
@@ -242,7 +242,13 @@ function gerenciarLife() {
 
     if (planetLife <= 0) {
         workframe = false;
+        document.write("<body style='margin:0;padding:0;background: #353535;display:flex;align-items:center;justify-content:center;min-height:100vh;'><img src='img/RESULT/derrota.jpg' style='width:50%;height:100%;'/></body>");
         alert('Você perdeu... o planeta foi destruído!');
+
+    if(planetLife > 0 && numMiss <= 0) {
+        document.write("<body style='margin:0;padding:0;background: #353535;display:flex;align-items:center;justify-content:center;min-height:100vh;'><img src='img/RESULT/vitoria.jpg' style='width:50%;height:100%;'/></body>");
+        alert('Você venceu... o planeta foi salvo!');
+    } 
     }
 }
 
