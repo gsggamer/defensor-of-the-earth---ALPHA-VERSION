@@ -1,3 +1,8 @@
+window.alert('Jogo de nave: Defensor of the Earth');
+window.alert('Como jogar: TECLAS DIRECIONAIS para mover; SPACE para atirar.');
+
+
+
 var nave = document.querySelector('#naveContainer');
 var srcMissil = new Image();
 srcMissil.src = 'img/missil.gif';
