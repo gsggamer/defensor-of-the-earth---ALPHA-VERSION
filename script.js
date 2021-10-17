@@ -17,7 +17,7 @@ var tiroCont;
 var frame;
 var workframe;
 
-var velNave = 8.45;
+var velNave = 8.65;
 var velTiro = 6;
 
 var indiceMissil = 0;
@@ -209,7 +209,7 @@ function controleMisseis() {
             misseisTot[i].style.top = posMiss+"px";
             if(posMiss>=telaHeight-120){
                 misseisTot[i].remove();
-               // planetLife-=20;
+               planetLife-=10;
             }
         }
     }
@@ -219,15 +219,7 @@ function controleMisseis() {
 //Controle de colisão entre o tiro e o míssil inimigo
 
 function colisaoTiroMissil() {
-    if (
-
-        (tiros[i].offsetTop >= posXMissil && posXTiro <= posXMissil)
-        &&
-        (posYTiro >= posYMissil && posYTiro <= posYMissil)
-    ) {
-        tiros[i].remove();
-        misseisTot[i].remove();
-    }
+    
 }
 
 
