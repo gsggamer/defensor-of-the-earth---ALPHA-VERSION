@@ -17,7 +17,7 @@ var tiroCont;
 var frame;
 var workframe;
 
-var velNave = 7.5;
+var velNave = 8.45;
 var velTiro = 6;
 
 var indiceMissil = 0;
@@ -56,7 +56,7 @@ function inicio() {
     planetLife = 250;
     planetLifeContainer.style.width = '250px';
 
-    tmpIntervalo = 2000;
+    tmpIntervalo = 2250;
 
     clearInterval(intervalo);
     velMissil = 3.5;
