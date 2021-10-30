@@ -195,7 +195,6 @@ function criaMisseis() {
     document.body.appendChild(elementoMissil);
 
     numMiss--;
-    //planetLife-=10;
 }
 
 function controleMisseis() {
