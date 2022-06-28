@@ -209,7 +209,7 @@ function controleMisseis() {
             misseisTot[i].style.top = posMiss+"px";
             if(posMiss>=telaHeight-120){
                 misseisTot[i].remove();
-               planetLife-=10;
+                planetLife-=10;
             }
         }
     }
@@ -273,12 +273,11 @@ function gerenciarLife() {
         workframe = false;
         document.write("<body style='margin:0;padding:0;background: #353535;display:flex;align-items:center;justify-content:center;min-height:100vh;'><img src='img/RESULT/derrota.jpg' style='width:50%;height:100%;'/></body>");
         alert('Você perdeu... o planeta foi destruído!');
-
-        if(planetLife > 0 && numMiss <= 0) {
-            document.write("<body style='margin:0;padding:0;background: #353535;display:flex;align-items:center;justify-content:center;min-height:100vh;'><img src='img/RESULT/vitoria.jpg' style='width:50%;height:100%;'/></body>");
-            alert('Você venceu... o planeta foi salvo!');
-        } 
     }
+    else if(planetLife > 0 && numMiss <= 0) {
+        document.write("<body style='margin:0;padding:0;background: #353535;display:flex;align-items:center;justify-content:center;min-height:100vh;'><img src='img/RESULT/vitoria.jpg' style='width:50%;height:100%;'/></body>");
+        alert('Você venceu... o planeta foi salvo!');
+    } 
 }
 
 function gameLoop() {
