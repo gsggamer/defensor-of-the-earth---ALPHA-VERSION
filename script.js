@@ -164,6 +164,7 @@ function controleTiros() {
             var posTiro = tiros[i].offsetTop;
             posTiro-=velTiro;
             tiros[i].style.top = posTiro+"px";
+            colisaoTiroMissil(tiros[i])
             if(posTiro<=-40){
                 tiros[i].remove();
             }
@@ -217,8 +218,18 @@ function controleMisseis() {
 
 //Controle de colisão entre o tiro e o míssil inimigo
 
-function colisaoTiroMissil() {
-    
+function colisaoTiroMissil(tiro) {
+    misseisTot = document.getElementsByClassName('misseis');
+    var tamanhoM = misseisTot.length;
+    for (var i=0; i<tamanhoM; i++) {
+        if(misseisTot[i]) {
+            if((tiro.offsetTop <= misseisTot[i].offsetTop + 75 && tiro.offsetTop + 50 >= misseisTot[i].offsetTop) && (tiro.offsetLeft <= misseisTot[i].offsetLeft + 53 && tiro.offsetLeft + 14 >= misseisTot[i].offsetLeft)){
+                console.log("BATEEEU")
+                tiro.remove()
+                misseisTot[i].remove()
+            }
+       }
+    }
 }
 
 
