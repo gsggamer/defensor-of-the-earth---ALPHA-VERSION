@@ -232,6 +232,25 @@ function colisaoTiroMissil(tiro) {
     }
 }
 
+//Controle de colisão entre a nave e o míssil inimigo
+
+/*function colisaoNaveMissil() {
+    misseisTot = document.getElementsByClassName('misseis');
+    var tamanhoM = misseisTot.length;
+    naveReal = document.querySelector("#navePrincipal")
+    for (var i=0; i<tamanhoM; i++) {
+        if(misseisTot[i]) {
+            if((naveReal.offsetTop <= misseisTot[i].offsetTop + 75 && naveReal.offsetTop + 115 >= misseisTot[i].offsetTop) && (naveReal.offsetLeft <= misseisTot[i].offsetLeft + 53 && naveReal.offsetLeft + 110 >= misseisTot[i].offsetLeft)){
+                console.log("BATEEEU")
+                nave.remove()
+                misseisTot[i].remove()
+                workframe = false;
+                document.write("<body style='margin:0;padding:0;background: #353535;display:flex;align-items:center;justify-content:center;min-height:100vh;'><img src='img/RESULT/derrota.jpg' style='width:50%;height:100%;'/></body>");
+                alert('Você perdeu... a nave e o planeta foram destruídos!');
+            }
+       }
+    }
+}*/
 
 //Controle do Jogo
 
@@ -255,10 +274,10 @@ function gerenciarLife() {
         document.write("<body style='margin:0;padding:0;background: #353535;display:flex;align-items:center;justify-content:center;min-height:100vh;'><img src='img/RESULT/derrota.jpg' style='width:50%;height:100%;'/></body>");
         alert('Você perdeu... o planeta foi destruído!');
 
-    if(planetLife > 0 && numMiss <= 0) {
-        document.write("<body style='margin:0;padding:0;background: #353535;display:flex;align-items:center;justify-content:center;min-height:100vh;'><img src='img/RESULT/vitoria.jpg' style='width:50%;height:100%;'/></body>");
-        alert('Você venceu... o planeta foi salvo!');
-    } 
+        if(planetLife > 0 && numMiss <= 0) {
+            document.write("<body style='margin:0;padding:0;background: #353535;display:flex;align-items:center;justify-content:center;min-height:100vh;'><img src='img/RESULT/vitoria.jpg' style='width:50%;height:100%;'/></body>");
+            alert('Você venceu... o planeta foi salvo!');
+        } 
     }
 }
 
